@@ -21,7 +21,7 @@ Running `devStart`
 npm run devStart
 ```
 
-# SparQL Apache Jena Fesuki Folder
+# SparQL Apache Jena Fuseki Folder
 
 1. Pastikan sudah terinstall Java / OpenJDK
 ```
