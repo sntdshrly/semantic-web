@@ -1,0 +1,77 @@
+1. Select all persons who belong to the class Father
+
+PREFIX g: <http://wsw.owl-ontologies.com/generations.owl#>
+
+SELECT ?person
+WHERE {
+  ?person a g:Father .
+}
+
+2. Select all pairs x-y where x is a father and y is his child. At the same time, their weights should be different. Show the results in descending order of the age of the children.
+
+PREFIX g: <http://wsw.owl-ontologies.com/generations.owl#>
+
+SELECT ?father ?child ?childAge
+WHERE {
+  ?father a g:Father .
+  ?child g:hasParent ?father ;
+         g:hasAge ?childAge .
+  FILTER(?father != ?child)
+}
+ORDER BY DESC(?childAge)
+
+
+3. Select all Men, and optionally their children and their parents if this information is available.
+
+PREFIX g: <http://wsw.owl-ontologies.com/generations.owl#>
+
+SELECT ?man ?child ?parent
+WHERE {
+  ?man a g:Man .
+  OPTIONAL {
+    ?man g:hasChild ?child .
+    ?man g:hasParent ?parent .
+  }
+}
+
+
+4. Select all persons who belong to either of Brother or Sister class.
+
+PREFIX g: <http://wsw.owl-ontologies.com/generations.owl#>
+
+SELECT ?person
+WHERE {
+  {
+    ?person a g:Brother .
+  }
+  UNION
+  {
+    ?person a g:Sister .
+  }
+}
+
+
+5. Select all parents older than 30 who do not have any information about whether he/she has a parent.
+
+PREFIX g: <http://wsw.owl-ontologies.com/generations.owl#>
+
+SELECT ?parent
+WHERE {
+  ?parent a g:Parent ;
+          g:hasAge ?age .
+  FILTER(?age > 30)
+  MINUS {
+    ?parent g:hasParent ?grandparent .
+  }
+}
+
+
+6. Return the number of people that have a child (or children).
+
+PREFIX g: <http://wsw.owl-ontologies.com/generations.owl#>
+
+SELECT (COUNT(?person) AS ?count)
+WHERE {
+  ?person a g:Person ;
+          g:hasChild ?child .
+}
