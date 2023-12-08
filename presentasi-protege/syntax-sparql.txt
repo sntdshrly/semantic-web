@@ -46,3 +46,29 @@ SELECT ?subject
 WHERE {
    ontology:Student1 ontology:studies ?subject.
 }
+
+
+6. Tampilkan nama lecturer yang mengajar Mathematics pada Student1
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ont: <http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#>
+
+SELECT ?teacher
+WHERE {
+  ont:Student1 ont:studies ?subject.
+  ?subject rdf:type ont:Mathematics.
+  ?teacher ont:teaches ?subject.
+}
+
+
+7. Tampilkan nama lecturer yang mengajar Mathematics (M01) pada Student1
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ont: <http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#>
+
+SELECT ?teacher
+WHERE {
+  ont:Student1 ont:studies ont:M01.
+  ont:M01 rdf:type ont:Mathematics.
+  ?teacher ont:teaches ont:M01.
+}
