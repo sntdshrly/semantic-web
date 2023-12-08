@@ -1,0 +1,48 @@
+1. Tampilkan semua data
+
+SELECT * {?x ?y ?z}
+
+2. Tampilkan individuals dosen dg properti sbb
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ontology: <http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#>
+
+SELECT ?lecturer ?firstName ?lastName ?lecturerID
+WHERE {
+   ?lecturer rdf:type ontology:Lecturer.
+   ?lecturer ontology:first_name ?firstName.
+   ?lecturer ontology:last_name ?lastName.
+   ?lecturer ontology:lecturerID ?lecturerID.
+}
+
+
+3. Sama dg no 2 namun untuk siswa
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ontology: <http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#>
+
+SELECT ?student ?firstName ?lastName ?studentID
+WHERE {
+   ?student rdf:type ontology:Student.
+   ?student ontology:first_name ?firstName.
+   ?student ontology:last_name ?lastName.
+   ?student ontology:studentID ?studentID.
+}
+
+4. Tampilkan subject yang diajar oleh Lecturer1
+
+PREFIX ontology: <http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#>
+
+SELECT ?subject
+WHERE {
+   ontology:Lecturer1 ontology:teaches ?subject.
+}
+
+5. Tampilkan subject yang diambil oleh Student1
+
+PREFIX ontology: <http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#>
+
+SELECT ?subject
+WHERE {
+   ontology:Student1 ontology:studies ?subject.
+}

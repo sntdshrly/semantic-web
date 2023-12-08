@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3/"
+     xml:base="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#studies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#studies">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#teaches -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#teaches">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#first_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#first_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#last_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#last_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#lecturerID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#lecturerID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#studentID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#studentID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Lecturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Lecturer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Mathematics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Mathematics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Subject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Statistics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Statistics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Subject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Subject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Subject"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Lecturer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Lecturer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Lecturer"/>
+        <untitled-ontology-3:teaches rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#M01"/>
+        <untitled-ontology-3:teaches rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#M02"/>
+        <untitled-ontology-3:first_name>Asep</untitled-ontology-3:first_name>
+        <untitled-ontology-3:last_name>Togel</untitled-ontology-3:last_name>
+        <untitled-ontology-3:lecturerID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</untitled-ontology-3:lecturerID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Lecturer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Lecturer2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Lecturer"/>
+        <untitled-ontology-3:teaches rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#S01"/>
+        <untitled-ontology-3:teaches rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#S02"/>
+        <untitled-ontology-3:first_name>Asiong</untitled-ontology-3:first_name>
+        <untitled-ontology-3:last_name>Togel</untitled-ontology-3:last_name>
+        <untitled-ontology-3:lecturerID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</untitled-ontology-3:lecturerID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#M01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#M01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Mathematics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#M02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#M02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Mathematics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#S01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#S01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Statistics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#S02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#S02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Statistics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Student1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Student1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Student"/>
+        <untitled-ontology-3:studies rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#M01"/>
+        <untitled-ontology-3:studies rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#M02"/>
+        <untitled-ontology-3:studies rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#S01"/>
+        <untitled-ontology-3:studies rdf:resource="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#S02"/>
+        <untitled-ontology-3:first_name>Sherly</untitled-ontology-3:first_name>
+        <untitled-ontology-3:last_name>Santiadi</untitled-ontology-3:last_name>
+        <untitled-ontology-3:studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</untitled-ontology-3:studentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Lecturer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Mathematics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Statistics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sntds/ontologies/2023/11/untitled-ontology-3#Student"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
